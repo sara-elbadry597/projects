@@ -13,21 +13,24 @@ arrayOfUsers=[]
     arrayOfUsers = JSON.parse(localStorage.getItem("users"));
 }
 // log in process
-loginBtn.addEventListener("click",function(e){
+loginBtn.addEventListener("click", function (e) {
     // Reset all messages
     warning.classList.add("d-none");
     invalid.classList.add("d-none");
+
     // Check for empty fields
-    if(email.value.length==0||password.value.length==0){
+    if (email.value.length == 0 || password.value.length == 0) {
         warning.classList.remove("d-none");
-       }
-        if (arrayOfUsers.some(user => user.mail === email.value)&&arrayOfUsers.some(user => user.pass === password.value)) {
-            window.location.href="file:///C:/Users/CARNIVAL/Desktop/assignments/js assignments/assignment4/login/welcome.html"
+    } else {
+        // Check if email and password match any user
+        if (arrayOfUsers.some(user => user.mail === email.value && user.pass === password.value)) {
+            window.location.href = "file:///C:/Users/CARNIVAL/Desktop/assignments/js assignments/assignment4/login/welcome.html";
         } else {
             invalid.classList.remove("d-none");
         }
     }
-)
+});
+
 
 
 registerLink.addEventListener("click",function(e){
