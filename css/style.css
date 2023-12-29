@@ -1,0 +1,25 @@
+main{
+    background-image: url("../login-bg.png");
+    background-size:cover ;
+    background-position: center;
+    height: 100vh;
+}
+.log-in{
+    border: 2px solid white;
+    background-color: hsla(0, 0%, 10%,0.1);
+    color: white;
+    backdrop-filter: blur(8px);
+}
+.light-box{
+    height: 90vh;
+    
+}
+.sign-in:hover{
+ color: black;
+}
+ input{
+    all: unset;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+}

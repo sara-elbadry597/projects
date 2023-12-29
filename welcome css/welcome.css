@@ -1,0 +1,37 @@
+body{
+    background-image: url("../login-bg.png");
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+.title{
+    height: 80vh;
+}
+h2{
+    font-size: 5rem;
+    color: #252839;
+    -webkit-text-stroke:0.1rem #408791 ;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    border-right: solid 3px #5eddee;
+    color:#5eddee;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    top: 0;
+    -webkit-text-stroke:0rem #408791 ;
+    overflow: hidden;
+    animation: animate 3s linear infinite ;
+}
+@keyframes animate {
+    0%,10%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
